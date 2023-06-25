@@ -1,5 +1,10 @@
 /* Global */
 
+@font-face {
+    font-family: Apricots;
+    src: url(./assets/Apricots.ttf);
+}
+
 :root {
     --white: #FFFFFF;
     --black: #000000;
@@ -12,7 +17,7 @@ body {
     background-color: var(--white);
     color: var(--black);
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -73,7 +78,7 @@ nav a:hover::after {
 
 .splash {
     width: 100vw;
-    height: calc(80vh - 90px);
+    height: calc(100vh - 100px);
     position: relative;
 }
 
@@ -86,15 +91,16 @@ nav a:hover::after {
 }
 
 .splash div {
-    width: 20vw;
-    height: calc(100% - 100px);
+    width: calc(50% - 200px);
+    height: calc(100% - 200px);
     position: absolute;
     left: 0;
-    padding: 50px 10vw;
+    top: 0;
+    padding: 100px;
     z-index: 1;
-    background-color: rgba(250, 250, 250, 0.65);
+    background-color: rgba(250, 250, 250, 0.75);
     color: var(--black);
-    font-size: 2.75em;
+    font-size: 2.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,9 +108,9 @@ nav a:hover::after {
     text-align: center;
 }
 
-.fancy {
-    font-weight: 600;
-    background-color: var(--accent);
-    color: var(--white);
-    padding: 0 5px;
+#splash-text {
+    font-family: "Apricots", "Open Sans", sans-serif;
+    font-size: 2em;
+    line-height: 100%;
+    color: var(--accent);
 }
