@@ -7,10 +7,9 @@
 
 :root {
     --white: #FFFFFF;
+    --lightgrey: #F4F4F4;
     --black: #000000;
     --accent: #4CAF50;
-    --link: #0277BD;
-    --link-hover: #01579B;
 }
 
 body {
@@ -30,11 +29,15 @@ h1 {
     margin: 0;
 }
 
+.section {
+    padding: 50px 15vw;
+}
+
 /* Header */
 
 header {
     background-color: var(--white);
-    padding: 25px 10vw;
+    padding: 25px 15vw;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -42,6 +45,7 @@ header {
     position: -webkit-sticky;
     top: 0;
     z-index: 2;
+    border-bottom: 3px solid var(--lightgrey);
 }
 
 header img {
@@ -57,7 +61,7 @@ nav {
 nav a {
     margin-left: 50px;
     position: relative;
-    font-weight: 400; /*Or 600?*/
+    font-weight: 400;
     text-decoration: none;
     font-size: 1.25em;
 }
@@ -71,7 +75,7 @@ nav a::after {
     left: 0;
     background-color: var(--accent);
     transform: scaleX(0);
-    transform-origin: left bottom; /*Not sure if I want to keep this*/
+    transform-origin: left bottom;
     transition: transform 500ms;
 }
 
@@ -91,7 +95,7 @@ nav a:hover::after {
 
 .splash {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 103px);
     position: relative;
 }
 
@@ -104,7 +108,7 @@ nav a:hover::after {
 }
 
 .splash div {
-    width: calc(50% - 200px);
+    width: calc(40% - 200px);
     height: calc(100% - 200px);
     position: absolute;
     left: 0;
@@ -113,7 +117,7 @@ nav a:hover::after {
     z-index: 1;
     background-color: rgba(250, 250, 250, 0.75);
     color: var(--black);
-    font-size: 2.5em;
+    font-size: 2.75em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,12 +132,6 @@ nav a:hover::after {
     color: var(--accent);
 }
 
-/* Sections */
-
-.section {
-    margin: 50px 10vw;
-}
-
 /* About */
 
 #about {
@@ -145,7 +143,7 @@ nav a:hover::after {
 .headshot-container {
     height: 250px;
     width: 250px;
-    margin-right: 25px;
+    margin-right: 50px;
     padding-top: 17px;
     position: relative;
 }
@@ -153,16 +151,36 @@ nav a:hover::after {
 .headshot-container img {
     width: 100%;
 }
-
+/*
 .headshot-container img:first-of-type {
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
 }
-
-.headshot-container img:last-of-type {
+*/
+.headshot-container div {
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--lightgrey);
+}
+.headshot-container img {
     border-radius: 0 0 48% 48%;
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+/* Pull quote */
+
+#quote {
+    height: 50vh;
+    background-image: url(./assets/AdobeStock_362353271.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Services */
+
+#services {
+    background-color: var(--lightgrey);
 }
