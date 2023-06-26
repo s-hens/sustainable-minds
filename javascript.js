@@ -6,14 +6,18 @@ const video1 = document.getElementById("splash-video1");
 const video2 = document.getElementById("splash-video2");
 const video3 = document.getElementById("splash-video3");
 
-function splashCarousel() {
-    if (text1.style.transform == "scale(1)") {
 
-        text2.style.transform = "scale(1)";
+function splashCarousel() {
+    if (text1.style.opacity == "1") {
+
+        text2.style.transform = "translateY(0)";
+        //text2.style.transform = "scale(1)";
         text2.style.opacity = "1";
 
-        text1.style.transform = "scale(0)";
-        text3.style.transform = "scale(0)";
+        text1.style.transform = "translateY(100%)";
+        text3.style.transform = "translateY(100%)";
+        //text1.style.transform = "scale(0)";
+        //text3.style.transform = "scale(0)";
         text1.style.opacity = "0";
         text3.style.opacity = "0";
 
@@ -26,13 +30,16 @@ function splashCarousel() {
         video1.pause();
         video3.pause();
 
-    } else if (text2.style.transform == "scale(1)") {
+    } else if (text2.style.opacity == "1") {
 
-        text3.style.transform = "scale(1)";
+        text3.style.transform = "translateY(0)";        
+        //text3.style.transform = "scale(1)";
         text3.style.opacity = "1";
 
-        text1.style.transform = "scale(0)";
-        text2.style.transform = "scale(0)";
+        text1.style.transform = "translateY(100%)";
+        text2.style.transform = "translateY(100%)";
+        //text1.style.transform = "scale(0)";
+        //text2.style.transform = "scale(0)";
         text1.style.opacity = "0";
         text2.style.opacity = "0";
 
@@ -47,11 +54,15 @@ function splashCarousel() {
 
     } else {
 
-        text1.style.transform = "scale(1)";
+        text1.style.transform = "translateY(0)";
+        //text1.style.transform = "scale(1)";
         text1.style.opacity = "1";
 
-        text2.style.transform = "scale(0)";
-        text3.style.transform = "scale(0)";
+
+        text2.style.transform = "translateY(100%)";
+        text3.style.transform = "translateY(100%)";
+        //text2.style.transform = "scale(0)";
+        //text3.style.transform = "scale(0)";
         text2.style.opacity = "0";
         text3.style.opacity = "0";
 

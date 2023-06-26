@@ -132,7 +132,7 @@ nav a:hover::after {
     font-size: 2em;
     color: var(--accent);
     transform-origin: center;
-    transition: transform 500ms, opacity 500ms;
+    transition: transform 1500ms, opacity 1500ms;
 }
 
 #splash-text2, #splash-text3 {
@@ -190,6 +190,7 @@ nav a:hover::after {
     text-align: center;
     background-color: var(--lightgrey);
     font-size: 2.5em;
+    line-height: 1.5em;
 }
 
 #quote span {
@@ -201,3 +202,9 @@ nav a:hover::after {
 }
 
 /* Services */
+
+#services {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
