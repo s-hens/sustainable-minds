@@ -111,13 +111,13 @@ nav a:hover::after {
     width: calc(40% - 200px);
     height: calc(100% - 200px);
     position: absolute;
-    left: 0;
+    left: 15vw;
     top: 0;
     padding: 100px;
     z-index: 1;
     background-color: rgba(250, 250, 250, 0.75);
     color: var(--black);
-    font-size: 2.75em;
+    font-size: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,6 +130,10 @@ nav a:hover::after {
     font-size: 2em;
     line-height: 100%;
     color: var(--accent);
+}
+
+#splash-video2, #splash-video3 {
+    display: none;
 }
 
 /* About */
