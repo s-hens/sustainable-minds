@@ -11,15 +11,16 @@ function splashCarousel() {
     if (text1.style.opacity == "1") {
 
         text2.style.transform = "translateY(0)";
-        //text2.style.transform = "scale(1)";
         text2.style.opacity = "1";
 
         text1.style.transform = "translateY(100%)";
         text3.style.transform = "translateY(100%)";
-        //text1.style.transform = "scale(0)";
-        //text3.style.transform = "scale(0)";
         text1.style.opacity = "0";
         text3.style.opacity = "0";
+        setTimeout(() => {
+            text1.style.transform = "translateY(-100%)";
+            text3.style.transform = "translateY(-100%)";
+        }, 1500);
 
         video2.style.display = "block";
         video2.currentTime = 0;
@@ -33,15 +34,16 @@ function splashCarousel() {
     } else if (text2.style.opacity == "1") {
 
         text3.style.transform = "translateY(0)";        
-        //text3.style.transform = "scale(1)";
         text3.style.opacity = "1";
 
         text1.style.transform = "translateY(100%)";
         text2.style.transform = "translateY(100%)";
-        //text1.style.transform = "scale(0)";
-        //text2.style.transform = "scale(0)";
         text1.style.opacity = "0";
         text2.style.opacity = "0";
+        setTimeout(() => {
+            text1.style.transform = "translateY(-100%)";
+            text2.style.transform = "translateY(-100%)";
+        }, 1500);
 
         video3.style.display = "block";
         video3.currentTime = 0;
@@ -55,16 +57,17 @@ function splashCarousel() {
     } else {
 
         text1.style.transform = "translateY(0)";
-        //text1.style.transform = "scale(1)";
         text1.style.opacity = "1";
 
 
         text2.style.transform = "translateY(100%)";
         text3.style.transform = "translateY(100%)";
-        //text2.style.transform = "scale(0)";
-        //text3.style.transform = "scale(0)";
         text2.style.opacity = "0";
         text3.style.opacity = "0";
+        setTimeout(() => {
+            text2.style.transform = "translateY(-100%)";
+            text3.style.transform = "translateY(-100%)";
+        }, 1500);
 
         video1.style.display = "block";
         video1.currentTime = 0;

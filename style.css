@@ -29,6 +29,14 @@ h1 {
     margin: 0;
 }
 
+ul {
+    margin-top: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
 .section {
     padding: 50px 15vw;
 }
@@ -132,7 +140,7 @@ nav a:hover::after {
     font-size: 2em;
     color: var(--accent);
     transform-origin: center;
-    transition: transform 1500ms, opacity 1500ms;
+    transition: transform 1500ms, opacity 750ms ease-in-out;
 }
 
 #splash-text2, #splash-text3 {
@@ -158,20 +166,20 @@ nav a:hover::after {
     height: 250px;
     width: 250px;
     margin-right: 50px;
+    margin-left: 0;
     padding-top: 17px;
     position: relative;
+}
+
+.headshot-container:nth-child(2) {
+    margin-right: 0;
+    margin-left: 50px;
 }
 
 .headshot-container img {
     width: 100%;
 }
-/*
-.headshot-container img:first-of-type {
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-*/
+
 .headshot-container div {
     height: 250px;
     border-radius: 50%;
@@ -207,4 +215,9 @@ nav a:hover::after {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+}
+
+.bullet-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
