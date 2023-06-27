@@ -1,85 +1,61 @@
+//////////////
+// Elements //
+//////////////
+
 const text1 = document.getElementById("splash-text1");
 const text2 = document.getElementById("splash-text2");
 const text3 = document.getElementById("splash-text3");
-
 const video1 = document.getElementById("splash-video1");
 const video2 = document.getElementById("splash-video2");
 const video3 = document.getElementById("splash-video3");
 
+///////////////
+// Functions //
+///////////////
 
 function splashCarousel() {
     if (text1.style.opacity == "1") {
-
-        text2.style.transform = "translateY(0)";
-        text2.style.opacity = "1";
-
-        text1.style.transform = "translateY(100%)";
-        text3.style.transform = "translateY(100%)";
-        text1.style.opacity = "0";
-        text3.style.opacity = "0";
-        setTimeout(() => {
-            text1.style.transform = "translateY(-100%)";
-            text3.style.transform = "translateY(-100%)";
-        }, 1500);
-
-        video2.style.display = "block";
-        video2.currentTime = 0;
-        video2.play();
-
-        video1.style.display = "none";
-        video3.style.display = "none";
-        video1.pause();
-        video3.pause();
-
+        turnOn(text2, video2);
+        turnOff(text1, video1, text3, video3);
     } else if (text2.style.opacity == "1") {
-
-        text3.style.transform = "translateY(0)";        
-        text3.style.opacity = "1";
-
-        text1.style.transform = "translateY(100%)";
-        text2.style.transform = "translateY(100%)";
-        text1.style.opacity = "0";
-        text2.style.opacity = "0";
-        setTimeout(() => {
-            text1.style.transform = "translateY(-100%)";
-            text2.style.transform = "translateY(-100%)";
-        }, 1500);
-
-        video3.style.display = "block";
-        video3.currentTime = 0;
-        video3.play();
-
-        video1.style.display = "none";
-        video2.style.display = "none";
-        video1.pause();
-        video2.pause();
-
+        turnOn(text3, video3);
+        turnOff(text1, video1, text2, video2);
     } else {
-
-        text1.style.transform = "translateY(0)";
-        text1.style.opacity = "1";
-
-
-        text2.style.transform = "translateY(100%)";
-        text3.style.transform = "translateY(100%)";
-        text2.style.opacity = "0";
-        text3.style.opacity = "0";
-        setTimeout(() => {
-            text2.style.transform = "translateY(-100%)";
-            text3.style.transform = "translateY(-100%)";
-        }, 1500);
-
-        video1.style.display = "block";
-        video1.currentTime = 0;
-        video1.play();
-
-        video2.style.display = "none";
-        video3.style.display = "none";
-        video2.pause();
-        video3.pause();
-
+        turnOn(text1, video1);
+        turnOff(text2, video2, text3, video3);
     }
 }
+
+function turnOn(textA, videoA) {
+    // Text
+    textA.style.transform = "translateY(0)";
+    textA.style.opacity = "1";
+    // Video
+    videoA.style.display = "block";
+    videoA.currentTime = 0;
+    videoA.play();
+}
+
+function turnOff(textB, videoB, textC, videoC) {
+    // Text
+    textB.style.transform = "translateY(100%)";
+    textC.style.transform = "translateY(100%)";
+    textB.style.opacity = "0";
+    textC.style.opacity = "0";
+    setTimeout(() => {
+        textB.style.transform = "translateY(-100%)";
+        textC.style.transform = "translateY(-100%)";
+    }, 1500);
+    // Video
+    videoB.style.display = "none";
+    videoC.style.display = "none";
+    videoB.pause();
+    videoC.pause();
+}
+
+//////////////
+// Autoplay //
+//////////////
 
 splashCarousel();
 setInterval(splashCarousel, 5000);

@@ -230,3 +230,25 @@ ul {
 li {
     margin-bottom: 5px;
 }
+
+/* Contact links */
+
+#contact svg {
+    transform: translateY(0.3em);
+    margin-right: 10px;
+}
+
+#contact a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#contact a:link, #contact a:visited, #contact a:focus, #contact a:active {
+    color: #0288D1;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #1976D2;
+    text-decoration: underline;
+}
