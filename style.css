@@ -9,7 +9,10 @@
     --white: #FFFFFF;
     --lightgrey: #F4F4F4;
     --black: #000000;
-    --accent: #4CAF50;
+    --accent: #43A047;
+    --blue1: #E1F5FE;
+    --blue2: #0288D1;
+    --blue3: #1976D2;;
 }
 
 body {
@@ -49,13 +52,15 @@ header img {
     width: auto;
 }
 
+/* Nav */
+
 nav {
     display: flex;
     align-items: center;
 }
 
 nav a {
-    margin-left: 50px;
+    margin-left: 75px;
     position: relative;
     font-weight: 400;
     text-decoration: none;
@@ -147,7 +152,7 @@ nav a:hover::after {
 .headshot-container {
     height: 250px;
     width: 250px;
-    margin-right: 50px;
+    margin-right: 75px;
     margin-left: 0;
     padding-top: 17px;
     position: relative;
@@ -155,7 +160,7 @@ nav a:hover::after {
 
 .headshot-container:nth-child(2) {
     margin-right: 0;
-    margin-left: 50px;
+    margin-left: 75px;
 }
 
 .headshot-container img {
@@ -165,7 +170,7 @@ nav a:hover::after {
 .headshot-container div {
     height: 250px;
     border-radius: 50%;
-    background-color: var(--lightgrey);
+    background-color: var(--blue1);
 }
 .headshot-container img {
     border-radius: 0 0 48% 48%;
@@ -177,7 +182,7 @@ nav a:hover::after {
 /* Sections */
 
 .section {
-    padding: 50px 15vw;
+    padding: 75px 15vw;
 }
 
 #services {
@@ -190,13 +195,6 @@ nav a:hover::after {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-}
-
-footer {
-    background-color: var(--black);
-    color: var(--white);
-    font-size: 0.9em;
-    text-align: center;
 }
 
 /* Pull quotes */
@@ -233,9 +231,9 @@ li {
 
 /* Contact links */
 
-#contact svg {
-    transform: translateY(0.3em);
+#contact img {
     margin-right: 10px;
+    transform: translateY(0.25em);
 }
 
 #contact a {
@@ -244,11 +242,21 @@ li {
 }
 
 #contact a:link, #contact a:visited, #contact a:focus, #contact a:active {
-    color: #0288D1;
+    color: var(--blue2);
     text-decoration: none;
 }
 
 #contact a:hover {
-    color: #1976D2;
+    color: var(--blue3);
     text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    padding: 25px 15vw;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 0.9em;
+    text-align: center;
 }
